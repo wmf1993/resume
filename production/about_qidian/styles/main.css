@@ -1,0 +1,104 @@
+a:link { color: #808080;}
+a:visited { color: #808080;}
+a:hover { color: #ed4259;}
+a:active { color: #808080;}
+
+  * {
+    padding: 0px;
+    margin: 0px;
+    
+    text-decoration: none;
+    font-style: normal;
+  }
+  
+  
+body {
+  background-color: #fff;
+}
+
+#top-out {
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 12px;
+  line-height: 35px;
+  font-family: PingFangSC-Regular, -apple-system, Simsun;
+  
+  
+  width: 1349px;
+  height: 35px;
+  background-color: #f7f7f7;
+  
+  border-bottom:1px solid #e5e5e5;
+}
+
+#top-nav {
+  width: 1200px;
+  border-style: solid;
+  border-color: #e5e5e5;
+  border-width: 0px 0px 1px 0px;
+  margin: 0px 74.5px;
+  
+}
+
+#top-nav ul, li {
+  display: inline;
+}
+#top-nav li em {
+  width: 3px;
+  text-align: center;
+  border: none;
+  margin: 0px 10px;
+  color: #d9d9d9;
+}
+
+#top-nav ul li a,em {
+  display: block;
+  float: left;
+  width: 60px;
+  text-align: center;
+}
+#top-nav ul li em {
+  font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 12px;
+    line-height: 35px;
+    font-family: Arial;
+}
+
+#top-left-nav li:first-child a {
+  background-color: #fff;
+  width: 80px;
+  border-style: solid;
+  border-color: #e5e5e5;
+  border-width: 0px 1px 0px 1px;
+  margin: 0px 10px 0px 0px;
+}
+#top-left-nav li:last-child a {
+  width: 36px;
+}
+#top-left-nav li:nth-last-child(2) a{
+  width: 48px;
+}
+
+#top-right-nav {
+  float: right;
+}
+#top-nav #top-right-nav li a {
+  width: 24px;
+}
+
+#top-right-nav li:first-child a:link  { color: black;}
+#top-right-nav li:first-child a:visited   { color: black;}
+#top-right-nav li:first-child a:active   { color: black;}
+
+#logo-wrap {
+  display: block;
+}

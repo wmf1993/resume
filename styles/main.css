@@ -1,0 +1,113 @@
+* {
+  margin: 0 auto;
+  text-decoration: none;
+  font-style: normal;
+
+}
+
+a:link { color: #808080;}
+a:visited { color: #808080;}
+a:hover { color: #ed4259;}
+a:active { color: #808080;}
+
+body {
+  width: 700px;
+  font-size: 14px;
+  font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
+}
+.body {
+    background-color: #fafafa;
+}
+
+/* header */
+header {
+  text-align: center;
+}
+header .name {
+  font-size: 30px;
+  font-family: Arial, "Hiragino Sans GB", 微软雅黑, 宋体;
+  margin: 10px 0px;
+}
+header .header_info {
+  color: #333;
+}
+header .header_info div{
+  margin: 5px 2px;
+} 
+header .identity .fonticon {
+  margin: 0px 5px;
+}
+header .info_1 span>i {
+  margin: 5px;
+}
+header .info_1 em {
+  margin: 5px;
+}
+header .info_2 em:last-child {
+  margin-left: 10px;
+}
+
+/* main */
+.body>div {
+  margin: 10px 0px;
+  padding: 0px 15px;
+}
+.body div .title {
+  padding-bottom: 5px;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  border-color: #aaa;
+  
+  font-size: 18px;
+}
+.time {
+  float: right;
+  font-size: 14px;
+  margin-right: 60px;
+}
+.content {
+  margin-top: 5px;
+}
+
+/* education */
+.education div .univ {
+  font-size: 16px;
+}
+.education div p {
+  margin: 2px 0px;
+}
+.education div img {
+  float: left;
+  height: 42px;
+  margin-right: 5px;
+}
+
+/* work_ex */
+.company {
+  font-size: 16px;
+}
+
+
+/* approach_me */
+.approach_me .content ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.approach_me .content ul li {
+  height: 19px;
+  margin-top: 10px;
+}
+.approach_me a {
+  position: relative;
+  bottom: 5px;
+  height: 19px;
+}
+.approach_me img {
+  position: relative;
+  top: 4px;
+  height: 19px;
+  margin-right: 5px;
+}
+.approach_me em {
+  width: 250px;
+}

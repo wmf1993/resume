@@ -12,6 +12,7 @@ a:active { color: #808080;}
 
 body {
   width: auto;
+  margin: 0px 0px;
   font-size: 14px;
   font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
 }

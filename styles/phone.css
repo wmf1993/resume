@@ -11,7 +11,7 @@ a:hover { color: #ed4259;}
 a:active { color: #808080;}
 
 body {
-  width: 700px;
+  width: auto;
   font-size: 14px;
   font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
 }
@@ -115,3 +115,8 @@ header .info_2 em:last-child {
 .approach_me em {
   width: 250px;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    width: auto;
+  }

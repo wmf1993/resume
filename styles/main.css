@@ -15,6 +15,7 @@ body {
   font-size: 14px;
   font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
 }
+
 .body {
     background-color: #fafafa;
 }
@@ -62,8 +63,10 @@ header .info_2 em:last-child {
 }
 .time {
   float: right;
+  width: 150px;
+  text-align: left;
   font-size: 14px;
-  margin-right: 60px;
+  margin-right: 300px;
 }
 .content {
   margin-top: 5px;
@@ -96,6 +99,7 @@ header .info_2 em:last-child {
 .approach_me .content ul li {
   height: 19px;
   margin-top: 10px;
+  font-size: 14px;
 }
 .approach_me a {
   position: relative;
@@ -111,3 +115,8 @@ header .info_2 em:last-child {
 .approach_me em {
   width: 250px;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    width: auto;
+  }

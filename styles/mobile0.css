@@ -1,5 +1,5 @@
 * {
-  margin: 0 auto;
+  margin: 0pt;
   text-decoration: none;
   font-style: normal;
 
@@ -12,112 +12,104 @@ a:active { color: #808080;}
 
 body {
   width: auto;
-  margin: 0px 0px;
-  font-size: 14px;
+  margin: 0pt 20pt;
+  background-color: #fafafa;
+  font-size: 8pt;
   font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
 }
 
-.body {
-    background-color: #fafafa;
-}
 
 /* header */
 header {
   text-align: center;
 }
 header .name {
-  font-size: 30px;
+  font-size: 30pt;
   font-family: Arial, "Hiragino Sans GB", 微软雅黑, 宋体;
-  margin: 10px 0px;
+  margin: 10pt 0pt;
 }
 header .header_info {
   color: #333;
 }
 header .header_info div{
-  margin: 5px 2px;
+  margin: 5pt 2pt;
 } 
 header .identity .fonticon {
-  margin: 0px 5px;
+  margin: 0pt 5pt;
 }
 header .info_1 span>i {
-  margin: 5px;
+  margin: 5pt;
 }
 header .info_1 em {
-  margin: 5px;
+  margin: 5pt;
 }
 header .info_2 em:last-child {
-  margin-left: 10px;
+  margin-left: 10pt;
 }
 
 /* main */
 .body>div {
-  margin: 10px 0px;
-  padding: 0px 15px;
+  margin: 10pt 0pt;
+  padding: 0pt 15pt;
 }
 .body div .title {
-  padding-bottom: 5px;
+  padding-bottom: 5pt;
   border-style: solid;
-  border-width: 0px 0px 2px 0px;
+  border-width: 0pt 0pt 2pt 0pt;
   border-color: #aaa;
   
-  font-size: 18px;
+  font-size: 11pt;
 }
 .time {
-  float: right;
-  width: 150px;
+  width: 100pt;
   text-align: left;
-  font-size: 14px;
-  margin-right: 300px;
+  font-size: 8pt;
+  margin-right: 300pt;
 }
 .content {
-  margin-top: 5px;
+  margin-top: 5pt;
 }
 
 /* education */
 .education div .univ {
-  font-size: 16px;
+  font-size: 14pt;
 }
 .education div p {
-  margin: 2px 0px;
+  margin: 2pt 0pt;
 }
 .education div img {
   float: left;
-  height: 42px;
-  margin-right: 5px;
+  height: 80pt;
+  margin-right: 5pt;
 }
 
 /* work_ex */
 .company {
-  font-size: 16px;
+  font-size: 14pt;
 }
 
 
 /* approach_me */
 .approach_me .content ul {
   list-style-type: none;
-  padding: 0px;
+  padding: 0pt;
 }
 .approach_me .content ul li {
-  height: 19px;
-  margin-top: 10px;
-  font-size: 14px;
+  height: 18pt;
+  margin-top: 10pt;
+  font-size: 8pt;
 }
 .approach_me a {
   position: relative;
-  bottom: 5px;
-  height: 19px;
+  bottom: 5pt;
+  height: 18pt;
 }
 .approach_me img {
   position: relative;
-  top: 4px;
-  height: 19px;
-  margin-right: 5px;
+  top: 4pt;
+  height: 18pt;
+  margin-right: 5pt;
 }
 .approach_me em {
-  width: 250px;
+  width: 250pt;
 }
-
-@media screen and (max-width: 600px) {
-  body {
-    width: auto;
-  }

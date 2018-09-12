@@ -11,21 +11,18 @@ a:hover { color: #ed4259;}
 a:active { color: #808080;}
 
 body {
-  width: 700px;
-  font-size: 14px;
-  font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
+  font-size: 12px;
+  font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+  background-color: #fafafa;
 }
 
-.body {
-    background-color: #fafafa;
-}
 
 /* header */
 header {
   text-align: center;
 }
 header .name {
-  font-size: 30px;
+  font-size: 25px;
   font-family: Arial, "Hiragino Sans GB", 微软雅黑, 宋体;
   margin: 10px 0px;
 }
@@ -39,13 +36,13 @@ header .identity .fonticon {
   margin: 0px 5px;
 }
 header .info_1 span>i {
-  margin: 5px;
+  margin: 5px 2px;
 }
 header .info_1 em {
-  margin: 5px;
+  margin: 5px 2px;
 }
 header .info_2 em:last-child {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 /*
 header .info_2 .icon-mail-envelope-closed::before {
@@ -53,8 +50,6 @@ header .info_2 .icon-mail-envelope-closed::before {
   top: 2px;
 }
 */ 
-
-
 
 
 /* main */
@@ -68,14 +63,14 @@ header .info_2 .icon-mail-envelope-closed::before {
   border-width: 0px 0px 2px 0px;
   border-color: #aaa;
   
-  font-size: 18px;
+  font-size: 15px;
 }
 .time {
   float: right;
-  width: 150px;
+  width: 100px;
   text-align: left;
-  font-size: 14px;
-  margin-right: 300px;
+  font-size: 12px;
+  margin-right: 100px;
 }
 .content {
   margin-top: 5px;
@@ -83,7 +78,7 @@ header .info_2 .icon-mail-envelope-closed::before {
 
 /* education */
 .education div .univ {
-  font-size: 16px;
+  font-size: 14px;
 }
 .education div p {
   margin: 2px 0px;
@@ -96,7 +91,7 @@ header .info_2 .icon-mail-envelope-closed::before {
 
 /* work_ex */
 .company {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 
@@ -108,7 +103,7 @@ header .info_2 .icon-mail-envelope-closed::before {
 .approach_me .content ul li {
   height: 19px;
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .approach_me a {
   position: relative;

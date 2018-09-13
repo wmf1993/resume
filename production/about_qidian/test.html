@@ -6,12 +6,11 @@
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/icomoon/style.css" />
-    <script src="scripts/global.js"></script>
   </head>
   <body>
     <header>
       <nav id="top-out">
-        <nav id="top-nav">
+        <nav id="top-nav" class="box-center">
   	      <ul id="top-left-nav">
       		  <li><a id="act" href="javascript:">起点中文网</a></li>
       		  <li><a href="javascript:" target="_blank">起点女生网</a><em>|</em></li>
@@ -25,11 +24,20 @@
       		</ul>
   	    </nav>
       </nav>
-      <div class="logo-wrap">
+      
+      <!-- advertisement -->
+      <div hidden class="ad box-center">
+        <a href="javascript:">
+          <img src="images/ad.jpg" />
+          <span class="ad-tag"></span>
+        </a>
+      </div>
+        
+      <div class="logo-wrap box-center">
         <img id="logo" src="images/qidian_logo.png" alt="logo" />
         <form id="search">
           <input type="text" id="search-box">
-          <button type="submit" id="search-button">Search</button>
+          <button type="submit" id="search-button">Se</button>
         </form>
 	    	<div id="bookrack">
 		      <a href="javascript:" target="_blank">
@@ -38,7 +46,7 @@
           </a>
   	  	</div>
       </div>
-      <nav id="main-nav">
+      <nav id="main-nav" class="box-center">
         <ul>
           <li class="first">
             <span>
@@ -88,6 +96,7 @@
         </ul>
       </nav>
     </header>
+    <script src="scripts/global.js"></script>
   </body>
 </html>
       

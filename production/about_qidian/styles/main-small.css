@@ -1,3 +1,4 @@
+  /* width 1200 => 990 */
 a:link { color: #808080;}
 a:visited { color: #808080;}
 a:hover { color: #ed4259;}
@@ -17,7 +18,7 @@ body {
 }
 
 .box-center {
-  width: 900px;
+  width: 990px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -42,7 +43,7 @@ body {
 }
 
 #top-nav {
-  width: 900px;
+  width: 990px;
   border-style: solid;
   border-color: #f7f7f7;
   border-width: 0px 0px 1px 0px;
@@ -114,19 +115,45 @@ body {
 
 
 /* advertisement */
-/* crazy... */
-.ad a {
+.ad {
   position: relative;
+  z-index: 1;
+  height: 60px;
+}
+  
+.ad a:first-child {
+  position: absolute;
+  z-index: 1;
+  width: 990px;
+  height: 60px;
 }
 .ad-tag {
   position: absolute;
-  top: 4px;
+  bottom: 4px;
+  right: 4px;
+  width: 24px;
+  height: 14px;
   background-image: url(../images/ad-tag.png);
   background-repeat: no-repeat;
   background-color: #000;
-  z-index: 10000;
+  z-index: 5;
 }
-    
+.close {
+  position: relative;
+  top: 17px;
+  z-index: 1;
+  float: right;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: rgba(202,203,205,0.3);
+}
+.icon-cross {
+  width: 14px;
+  font-size: 12px;
+  color: #000;
+}
+
 
 /* logo-wrap */
 .logo-wrap {
@@ -164,7 +191,7 @@ body {
   width: 118px;
   height: 38px;
   border-style: solid;
-  border-color: bf2c24;
+  border-color: #e6e6e6;
   border-width: 1px;
   
   text-align: left;

@@ -26,6 +26,8 @@
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
             'mobile': '&#x1f319;',
+            'cross': '&#xea0f;',
+            'cancel': '&#xea0f;',
           '0': 0
         };
         delete icons['0'];

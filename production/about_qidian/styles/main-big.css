@@ -1,0 +1,10 @@
+/* width-big 990px => 1200px */
+.box-center {
+  width: 1200px;
+}
+#top-nav {
+  width: 1200px;
+}
+.ad a:first-child {
+  width: 1200px;
+}

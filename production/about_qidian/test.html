@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>MIX fiction WEB</title>
-    <link rel="icon" href="favicon.ico" />
+    <title>Imitate qidian</title>
+    <link rel="icon" href="qidian_icon.ico" />
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main-big.css" />
     <link rel="stylesheet" href="styles/icomoon/style.css" />
   </head>
   <body>
@@ -39,8 +40,10 @@
       <div class="logo-wrap box-center">
         <img id="logo" src="images/qidian_logo.png" alt="logo" />
         <form id="search">
-          <input type="text" id="search-box">
-          <button type="submit" id="search-button">Se</button>
+          <input type="text" id="search-box" placeholder="qidian">
+          <button type="submit" id="search-button">
+            <em class="icon-search"></em>
+          </button>
         </form>
 	    	<div id="bookrack">
 		      <a href="javascript:" target="_blank">
@@ -49,55 +52,58 @@
           </a>
   	  	</div>
       </div>
-      <nav id="main-nav" class="box-center">
-        <ul>
-          <li class="first">
-            <span>
-              <em>
-                <i></i>
-                <i></i>
-                <i></i>
-              </em>作品分类
-            </span>
-          </li>
-          <li class="nav-li">
-            <a href="javascript:">全部作品</a>
-          </li>
-          <li class="nav-li">
-            <a href="javascript:">排行</a>
-          </li>
-          <li class="nav-li">
-            <a href="javascript:">完本</a>
-          </li>
-          <li class="nav-li">
-            <a href="javascript:">免费</a>
-          </li>
-          <li class="nav-li">
-            <a href="javascript:">作家专区</a>
-          </li>
-          <li class="nav-li">
-            <a href="javascript:">
-              <span class="icon-mobile"></span>客户端
-            </a>
-          </li>
-          <li class="mouse-hover">
-            <a href="javascript:" class="game-hover">
-              <span></span>页游
-            </a>
-            <div class="web-game">
-              <p>web game</p>
-            </div>
-          </li>
-          <li class="mouse-hover">
-            <a href="javascript:" class="game-hover">
-              <span></span>手游
-            </a>
-            <div class="phone-game">
-              <p>web game</p>
-            </div>
-          </li>
-        </ul>
-      </nav>
+      <div class="main-nav-wrap">
+        <nav id="main-nav" class="box-center">
+          <ul>
+            <li class="first">
+              <span>
+                <em>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </em>
+                作品分类
+              </span>
+            </li>
+            <li class="nav-li">
+              <a href="javascript:">全部作品</a>
+            </li>
+              <li class="nav-li">
+                <a href="javascript:">排行</a>
+              </li>
+              <li class="nav-li">
+                <a href="javascript:">完本</a>
+              </li>
+            <li class="nav-li">
+              <a href="javascript:">免费</a>
+            </li>
+            <li class="nav-li">
+              <a href="javascript:">作家专区</a>
+            </li>
+            <li class="nav-li">
+              <a href="javascript:">
+                <span class="icon-mobile fonticon"></span>客户端
+              </a>
+            </li>
+            <li class="nav-li game phone">
+              <a href="javascript:" class="game-hover">
+                <span class="icon-gamepad fonticon"></span>手游
+              </a>
+              <div class="phone-game" style="display:none">
+                <p>web game</p>
+              </div>
+            </li>
+            <li class="nav-li game web">
+              <a href="javascript:" class="game-hover">
+                <span class="icon-mouse fonticon"></span>页游
+              </a>
+              <div class="web-game" style="display:none">
+                <p>web game</p>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <script src="scripts/global.js"></script>
   </body>

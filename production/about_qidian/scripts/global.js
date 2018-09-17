@@ -89,8 +89,13 @@ function changeGameColor () {
         if (icons[j].nodeType == 1) {
           that.style.color = '#ffeea8';
           icons[j].style.color = '#ffeea8';
-          console.log(icons[j]);
+          that.nextElementSibling.style.display='block';
+          that.nextElementSibling.style.backgroundColor='#aaff88';
+          that.nextElementSibling.style.color='#6060ff';
         }
+      }
+      that.nextElementSibling.onmouseover = function() {
+          this.style.display='block';
       }
     }
     eles[i].onmouseout = function() {
@@ -100,8 +105,11 @@ function changeGameColor () {
         if (icons[j].nodeType == 1) {
           that.style.color = '';
           icons[j].style.color = '';
-          console.log(icons[j]);
+          that.nextElementSibling.style.display='none';
         }
+      }
+      that.nextElementSibling.onmouseout = function() {
+        this.style.display='none';
       }
     }
   }

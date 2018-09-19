@@ -191,6 +191,9 @@ body {
   border: none;
   background-color: #bf2c24;
 }
+#search-button:hover {
+  cursor: pointer;
+}
 .icon-search {
   width: 40px;
   font-size: 0px;
@@ -251,6 +254,8 @@ body {
 
 /*  main-nav  */
 .main-nav-wrap {
+  position: relative;
+  z-index: 2;
   height: 40px;
   margin-bottom: 10px;
   background-color: #3e3d43;
@@ -279,6 +284,14 @@ body {
   text-align: left;
   color: #fff;
   background-color: #313035;
+}
+#main-nav li.first:hover span {
+  background-color: #252428;
+  cursor: pointer;
+}
+#main-nav li.nav-li:hover {
+  background-color: #252428;
+  cursor: pointer;
 }
 #main-nav .first span em {
   width: 16px;
@@ -322,6 +335,14 @@ body {
 
 #main-nav .game {
   float: right;
+  width: 96px;
+  height: 40px;
+  line-height: 38px;
+  text-align: center;
+}
+#main-nav .game a {
+  color: #fff;
+  line-height: 38px;
 }
 #main-nav .web {
   width: 73px;
@@ -374,11 +395,11 @@ body {
 */
 
 /*  all font-icon in .nav-li */
-#main-nav .nav-li .fonticon {
+#main-nav li .fonticon {
   color: #d8d8d9;
 }
 
-#main-nav .nav-li .fonticon:before {
+#main-nav li .fonticon:before {
   float: left;
   width: 16px;
   line-height: 38px;
@@ -393,13 +414,19 @@ body {
   position: relative;
   width: 214px;
   height: 420px;
+  top: -11px;
   border: 1px solid #e6e6e6;
   border-top: none;
 }
+
 .classify-list dd {
   float: left;
   width: 107px;
   height: 60px;
+  background-color: #f7f6f2;
+}
+.classify-list .even {
+  background-color: #fcfcfa;
 }
 .classify-list dd cite {
   position: relative;
@@ -408,7 +435,33 @@ body {
   height: 43px;
   padding: 17px 0 0 17px;
 }
-.classify-list dd cite em {
+.classify-list dd .qd {
   float: left;
+  width: 24px;
+  height: 24px;
+  margin: 2px 8px 0 0;
+  font-size: 24px;
+  color: #333;
+  transition-property: margin;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
-  
+.classify-list dd .info {
+  float: left;
+  max-width: 42px;
+}
+.classify-list dd .info i {
+  display: block;
+  font: 14px/1 PingFangSC-Regular,'-apple-system',Simsun;
+  color: #333
+}
+.classify-list dd .info b {
+  display: block;
+  height: 18px;
+  font: 12px/1.5 Arial;
+  color: #999;
+}
+.classify-list dd a:hover .qd {
+  margin: 2px 11px 0 -3px;
+  color: #ed4259;
+}

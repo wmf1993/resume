@@ -34,6 +34,7 @@ function browserChange() {
 }
 window.onresize = browserChange;
 
+// advertisement
 // close element & change element's color
 function closeClick() {
   var eles = document.getElementsByClassName('close');
@@ -79,7 +80,7 @@ function changeColor () {
 addLoadEvent(changeColor);
 
 //  onmouse Event change color, game
-function changeGameColor () {
+function changeGameColor() {
   var eles = document.getElementsByClassName('game-hover');
   for (var i=0; i<eles.length; i++) {
     eles[i].onmouseover = function() {

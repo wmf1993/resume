@@ -75,7 +75,7 @@ header .info_2 .icon-mail-envelope-closed::before {
   width: 150px;
   text-align: left;
   font-size: 14px;
-  margin-right: 300px;
+  margin-right: 200px;
 }
 .content {
   margin-top: 5px;
@@ -94,6 +94,34 @@ header .info_2 .icon-mail-envelope-closed::before {
   margin-right: 5px;
 }
 
+/* self-description */
+.self-description .content p:last-child {
+  padding: 5px 0;
+}
+.self-description .content p a {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  margin: 0 0 0 5px;
+}
+.self-description .content p em {
+  margin-right: 5px;
+}
+@keyframes fontcolor {
+  0% {color: #ed4259; bottom: 0px;}
+  25% {color: #00ff00; bottom: 3px;}
+  50% {color: #0000ff; bottom: 0px;}
+  75% {color: #ff00ff; bottom: -3px;}
+  100% {color: #ed4259; bottom: 0px;}
+}
+.self-description .content p a {
+  animation-name: fontcolor;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
+}
+  
 /* work_ex */
 .company {
   font-size: 16px;

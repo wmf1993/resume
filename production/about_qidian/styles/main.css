@@ -118,6 +118,7 @@ body {
 }
 
 #top-right-nav li:first-child a:link  { color: black;}
+#top-right-nav li:first-child a:hover  { color: #ed4259;}
 #top-right-nav li:first-child a:visited   { color: black;}
 #top-right-nav li:first-child a:active   { color: black;}
 

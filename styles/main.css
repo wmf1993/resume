@@ -103,8 +103,21 @@ header .info_2 .icon-mail-envelope-closed::before {
   position: relative;
   width: 200px;
   margin: 0 0 0 5px;
+  
+  animation-name: fontcolor;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
-.self-description .content p em {
+.self-description .content p a img {
+  position: relative;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+}
+.self-description .content p a em {
+}
+.self-description .content p>em {
   margin-right: 5px;
 }
 @keyframes fontcolor {
@@ -114,13 +127,7 @@ header .info_2 .icon-mail-envelope-closed::before {
   75% {color: #ff00ff; bottom: -3px;}
   100% {color: #ed4259; bottom: 0px;}
 }
-.self-description .content p a {
-  animation-name: fontcolor;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  
-}
+
   
 /* work_ex */
 .company {

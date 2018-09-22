@@ -96,19 +96,27 @@ header .info_2 .icon-mail-envelope-closed::before {
 
 /* self-description */
 .self-description .content p:last-child {
-  padding: 5px 0;
+  padding-top: 5px;
+  margin-top: 10px;
 }
 .self-description .content p a {
   display: inline-block;
   position: relative;
-  width: 200px;
-  margin: 0 0 0 5px;
+  width: auto;
+  margin-right:20px;
+  padding-right: 20px;
+  border-right: solid 1px #aaa;
   
   animation-name: fontcolor;
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+.self-description .content p a:last-child {
+  border-right: none;
+  margin-left: -5px;
+}
+  
 .self-description .content p a img {
   position: relative;
   top: 3px;
@@ -127,7 +135,11 @@ header .info_2 .icon-mail-envelope-closed::before {
   75% {color: #ff00ff; bottom: -3px;}
   100% {color: #ed4259; bottom: 0px;}
 }
-
+.self-description .content p:last-child {
+  border-top: dotted 2px #aaa;
+  margin-top: 5px;
+  
+}
   
 /* work_ex */
 .company {

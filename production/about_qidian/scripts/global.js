@@ -116,3 +116,10 @@ function changeGameColor() {
   }
 }
 addLoadEvent(changeGameColor);
+
+/*  === carousel === */
+function carousel(classNode, n) {
+  var node = document.getElementsByClass(classNode)[n];
+  catchNodes(node,n);
+}
+//carousel('focus-carousel', 0)

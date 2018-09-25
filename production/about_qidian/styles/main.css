@@ -411,8 +411,10 @@ body {
 
 
 /* -------- part 2 -------- */
+/* === left === */
 .classify-list {
   position: relative;
+  float: left;
   width: 214px;
   height: 420px;
   top: -11px;
@@ -465,4 +467,42 @@ body {
 .classify-list dd a:hover .qd {
   margin: 2px 11px 0 -3px;
   color: #ed4259;
+}
+
+/* === middle === */
+/* --- middle top --- */
+.focus-box {
+  float: left;
+  width: 748px;
+  height: 410px;
+  padding-left: 10px;
+}
+.focus-slider {
+  position: relative;
+  width: 748px;
+  height: 250px;
+}
+.focus-carousel ul {
+}
+.focus-carousel ul li {
+  position: absolute;
+  width: 748px;
+  height: 250px;
+  overflow: hidden;
+}
+.focus-carousel ul li a {
+}
+.focus-carousel ul li a img {
+  display: block;
+  width: 828px;
+}
+.click {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+}
+/* --- middle bottom --- */
+.focus-box .focus-img {
+  width: 748px;
+  height: 160px;
 }

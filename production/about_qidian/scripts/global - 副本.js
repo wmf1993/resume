@@ -117,78 +117,39 @@ function changeGameColor() {
 }
 addLoadEvent(changeGameColor);
 
-
 /*  === carousel === */
 function moveElement(elemID, move_x, interval) { /*元素ID以及X移动距离 */
   var elem = document.getElementById(elemID);
-  
   elem.style.transitionProperty = 'transform';
   elem.style.transitionDuration = '300ms';
   elem.style.transitionTimingFunction = 'linear';
   var moveX = 'translateX(' + move_x + '%)';
   elem.style.transform = moveX;
-  
- // var repeat = "moveElement('" + elemID +"'," + move_x +", " + interval + ")";
- // elem.movement = setTimeout(repeat, interval);
+  var repeat = "moveElement('" + elemID +"'," + interval + ")"
+  //elem.movement = setTimeout(repeat, interval);
 }
-
-function clickImg() {
+function click() {
   var clickChilds = document.getElementsByClassName('click')[0].childNodes;
-  /* -- 对于两边的button，循环调用函数,直至左边或右边兄弟img都挪开 --*/
-  function movePrevious(elem){
-    if (!elem.previousElementSibling) return;
-    fontElemID = elem.previousElementSibling.href.replace(/.*#(.*)/g,'$1');
-    moveElement(fontElemID, -100, 1000);
-    movePrevious(elem.previousElementSibling);
-  }
-  function moveNext(elem) {
-    if (!elem.nextElementSibling) return;
-      nextElemID = elem.nextElementSibling.href.replace(/.*#(.*)/g,'$1');
-      moveElement(nextElemID, 100, 1000);
-      moveNext(elem.nextElementSibling);
-  }
-  
   for (var i=0; i<clickChilds.length; i++) {
     if (clickChilds[i].nodeType == 1) {
-      /* -- question: can't set time ==*/
-      console.log(clickChilds[i].clicked);
-      if (clickChilds[i].style.stranform != 'translateX(0%)') clearTimeout(clickChilds[i].clicked);
-      
       clickChilds[i].onclick = function() {
-        that = this;
-        var elemID = that.href.replace(/.*#(.*)/g,'$1');
-        var fontElemID;
-        var nextElemID;
-        moveElement(elemID, 0, 1000);
-        
-        if (!that.nextElementSibling) {
-          fontElemID = that.previousElementSibling.href.replace(/.*#(.*)/g,'$1');
-          moveElement(fontElemID, -100, 1000);
-          movePrevious(that);
+        var elemID = this.href.replace(/.*#(.*)/g,'$1')
+        moveElement(elemID, 0, 300);
+        if (elemID == 'item5') {
+          nextElemID = 'item1';
+          moveElement(nextElemID, -100, 300);
         }
-        if (!that.previousElementSibling) {
-          nextElemID = that.nextElementSibling.href.replace(/.*#(.*)/g,'$1');
-          moveElement(nextElemID, 100, 1000);
-          moveNext(that);
+        if (elemID == 'item1') {
+          fontElemID = 'item5';
+          moveElement(fontElemID,  100, 300);
         }
-        if (that.nextElementSibling && that.previousElementSibling) {
-          fontElemID = that.previousElementSibling.href.replace(/.*#(.*)/g,'$1');
-          nextElemID = that.nextElementSibling.href.replace(/.*#(.*)/g,'$1');
-          moveElement(fontElemID, -100, 1000);
-          moveElement(nextElemID, 100, 1000);
-        }
-        /*
-        that.clicked = setTimeout(function(){
-          if(!that.nextElementSibling) clickChilds[1].click();
-          that.nextElementSibling.click();
-          }, 1000);
-          */
+        var nextElemID = this.nextElementSibling.href.replace(/.*#(.*)/g,'$1');
+        moveElement(nextElemID, -100, 300);
+        var fontElemID = this.previousElementSibling.href.replace(/.*#(.*)/g,'$1');
+        moveElement(fontElemID, 100, 300);
       }
-      clickChilds[i].addEventListener('click', function(){});
-      
     }
   }
-  clickChilds[1].click();
 }
-addLoadEvent(clickImg);
+addLoadEvent(click);
 //carousel('item1', '-100%', 300ms)

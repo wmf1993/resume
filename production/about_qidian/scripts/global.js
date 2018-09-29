@@ -119,7 +119,7 @@ addLoadEvent(changeGameColor);
 
 
 /*  === carousel === */
-function moveElement(elemID, move_x, interval) { /*元素ID以及X移动距离 */
+function moveElement(elemID, move_x) { /*元素ID以及X移动距离 */
   var elem = document.getElementById(elemID);
   
   elem.style.transitionProperty = 'transform';
@@ -127,66 +127,97 @@ function moveElement(elemID, move_x, interval) { /*元素ID以及X移动距离 *
   elem.style.transitionTimingFunction = 'linear';
   var moveX = 'translateX(' + move_x + '%)';
   elem.style.transform = moveX;
-  
- // var repeat = "moveElement('" + elemID +"'," + move_x +", " + interval + ")";
- // elem.movement = setTimeout(repeat, interval);
 }
 
 function clickImg() {
   var clickChilds = document.getElementsByClassName('click')[0].childNodes;
+  var childsArray=new Array();
   /* -- 对于两边的button，循环调用函数,直至左边或右边兄弟img都挪开 --*/
   function movePrevious(elem){
     if (!elem.previousElementSibling) return;
     fontElemID = elem.previousElementSibling.href.replace(/.*#(.*)/g,'$1');
-    moveElement(fontElemID, -100, 1000);
+    moveElement(fontElemID, -100);
     movePrevious(elem.previousElementSibling);
   }
   function moveNext(elem) {
     if (!elem.nextElementSibling) return;
       nextElemID = elem.nextElementSibling.href.replace(/.*#(.*)/g,'$1');
-      moveElement(nextElemID, 100, 1000);
+      moveElement(nextElemID, 100);
       moveNext(elem.nextElementSibling);
   }
   
   for (var i=0; i<clickChilds.length; i++) {
     if (clickChilds[i].nodeType == 1) {
+      childsArray.push(clickChilds[i]); // childsArray ???
       /* -- question: can't set time ==*/
-      console.log(clickChilds[i].clicked);
-      if (clickChilds[i].style.stranform != 'translateX(0%)') clearTimeout(clickChilds[i].clicked);
-      
+ //     console.log(clickChilds[i].clicked);
+  //    if (clickChilds[i].style.stranform != 'translateX(0%)') clearTimeout(clickChilds[i].clicked);
       clickChilds[i].onclick = function() {
         that = this;
+        that.setAttribute('class', 'active');
         var elemID = that.href.replace(/.*#(.*)/g,'$1');
         var fontElemID;
         var nextElemID;
-        moveElement(elemID, 0, 1000);
+        moveElement(elemID, 0);
+        clearTimeout(that.clickTimer);  //clear ths clickTimer;
         
         if (!that.nextElementSibling) {
           fontElemID = that.previousElementSibling.href.replace(/.*#(.*)/g,'$1');
-          moveElement(fontElemID, -100, 1000);
+          moveElement(fontElemID, -100);
           movePrevious(that);
         }
         if (!that.previousElementSibling) {
           nextElemID = that.nextElementSibling.href.replace(/.*#(.*)/g,'$1');
-          moveElement(nextElemID, 100, 1000);
+          moveElement(nextElemID, 100);
           moveNext(that);
         }
         if (that.nextElementSibling && that.previousElementSibling) {
           fontElemID = that.previousElementSibling.href.replace(/.*#(.*)/g,'$1');
           nextElemID = that.nextElementSibling.href.replace(/.*#(.*)/g,'$1');
-          moveElement(fontElemID, -100, 1000);
-          moveElement(nextElemID, 100, 1000);
+          moveElement(fontElemID, -100);
+          moveElement(nextElemID, 100);
         }
-        /*
-        that.clicked = setTimeout(function(){
-          if(!that.nextElementSibling) clickChilds[1].click();
-          that.nextElementSibling.click();
-          }, 1000);
-          */
+        that.clickTimer = setTimeout(function(){  //clickTimer
+          if(!that.nextElementSibling) {
+            clickChilds[1].click();
+          } else {
+            that.nextElementSibling.click();
+          }
+          }, 500);
+       return false; 
       }
-      clickChilds[i].addEventListener('click', function(){});
-      
     }
+  }
+  /* -- addEventListener judge whether click or mouse over or out --*/
+  var clickChild;
+  for (var i=0; i<childsArray.length; i++) {
+    childsArray[i].addEventListener('click',function(){ // click
+      clickChild = this;
+      if (this.clickTimer) {
+        if (this.previousElementSibling) {
+          clearTimeout(this.previousElementSibling.clickTimer);
+        } else {
+          clearTimeout(childsArray[childsArray.length-1].clickTimer);
+        }
+      }
+    }, true);
+    childsArray[i].addEventListener('mouseover', function(){ // mouseover
+      for (var j=0; j<childsArray.length; j++) {
+        if (!childsArray[j].clickTimer && !childsArray[j].resetTimer) continue;
+        if (childsArray[j].clickTimer) clearTimeout(childsArray[j].clickTimer);
+        if (childsArray[j].resetTimer) clearTimeout(childsArray[j].resetTimer);
+      }
+      console.log('over');
+    }, false);
+    childsArray[i].addEventListener('mouseout', function(){ // mouseout
+      clickChild.resetTimer = setTimeout(function(){  //clickTimer for mouseout
+          if(!clickChild.nextElementSibling) {
+            clickChilds[1].click();
+          } else {
+            clickChild.nextElementSibling.click();
+          }
+          }, 500);;
+    }, true);
   }
   clickChilds[1].click();
 }

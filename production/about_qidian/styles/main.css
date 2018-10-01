@@ -195,13 +195,14 @@ body {
 #search-button:hover {
   cursor: pointer;
 }
-.icon-search {
-  width: 40px;
-  font-size: 0px;
-  vertical-align: bottom;
+input::-webkit-input-placeholder {
+  color: #cccccc;
 }
-.icon-search:before {
-  font-size: 19px;
+#search-button .icon_qd-sousuo {
+  width: 40px;
+  font-size: 18px;
+}
+.icon_qd-sousuo:before {
   color: #fff;
 }
 
@@ -479,24 +480,30 @@ body {
 }
 .focus-slider {
   position: relative;
-  width: 748px;
-  height: 250px;
-}
-.focus-carousel ul {
-}
-.focus-carousel ul li {
-  position: absolute;
-  display: list-item;
-  width: 748px;
+  width: 100%;
   height: 250px;
   overflow: hidden;
 }
-
+.focus-carousel ul {
+  list-style: none;
+}
+.focus-carousel ul li {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  z-index: 1;
+  display: none;
+}
+.focus-carousel ul li#item1 {
+  display: block;
+  display: list-item;
+}
 
 .focus-carousel ul li a {
+  display: block;
+  height: 250px;
 }
 .focus-carousel ul li a img {
-  display: block;
   width: 828px;
 }
 
@@ -521,6 +528,10 @@ body {
   padding: 0 5px;
   border-right: 1px solid rgba(255,255,255,.4);
 }
+.click a.active{
+  background-color: #ed4259;
+}
+
 .click a:last-child {
   color: #ffeea8;
 }
@@ -562,3 +573,31 @@ body {
   width: 748px;
   height: 160px;
 }
+.focus-img li {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 33.33%;
+  height: 160px;
+  text-align: center;
+  transition: box-shadow 0.5s;
+  background: url(../images/focus_img_bg.png) no-repeat center;
+}
+.focus-img li:hover {
+  z-index: 2;
+  box-shadow: 0px 5px 10px red;
+}
+
+.focus-img ul li:nth-child(2) {
+  background: #f7f6f2;
+}
+.focus-img li img {
+  display: block;
+  width: 180px;
+  height: 140px;
+  margin: 20px auto 0px;
+}
+.focus-img .ad-tag {
+  background-color: #d0d0cf;
+}
+  

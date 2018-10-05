@@ -119,13 +119,13 @@ addLoadEvent(changeGameColor);
 
 
 /*  === carousel === */
-function moveElement(elemID, derection, move_x) { /*元素ID以及X移动方向及距离 */
+function moveElement(elemID, time, move_x, move_y) { /*元素ID以及X移动方向及距离 */
   var elem = document.getElementById(elemID);
   elem.style.display = 'list-item';
   elem.style.transitionProperty = 'transform';
-  elem.style.transitionDuration = '300ms';
+  elem.style.transitionDuration = time + 'ms';
   elem.style.transitionTimingFunction = 'linear';
-  var moveX = 'translateX(' + derection*move_x + '%)';
+  var moveX = 'translate(' + move_x + '%, ' + move_y + '%)';
   elem.style.transform = moveX;
 }
 
@@ -137,13 +137,13 @@ function clickImg() {
   function movePrevious(elem){
     if (!elem.previousElementSibling) return;
     previousElemID = elem.previousElementSibling.href.replace(/.*#(.*)/g,'$1');
-    moveElement(previousElemID, 1, 100);
+    moveElement(previousElemID, 300, 100, 0);
     movePrevious(elem.previousElementSibling);
   }
   function moveNext(elem) {
     if (!elem.nextElementSibling) return;
       nextElemID = elem.nextElementSibling.href.replace(/.*#(.*)/g,'$1');
-      moveElement(nextElemID, -1, 100);
+      moveElement(nextElemID, 300, -100, 0);
       moveNext(elem.nextElementSibling);
   }
   /* -- get the elements name of 'a' and convert to Array -- */
@@ -167,23 +167,23 @@ function clickImg() {
       var elemID = that.href.replace(/.*#(.*)/g,'$1');
       var previousElemID;
       var nextElemID;
-      moveElement(elemID, -1, 0);
+      moveElement(elemID, 300, 0, 0);
       
       for (var j=0; j<childsArray.length; j++) {
         if (childsArray[j].clickTimer) clearTimeout(childsArray[j].clickTimer);
       }
       if (!that.nextElementSibling) {
         previousElemID = that.previousElementSibling.href.replace(/.*#(.*)/g,'$1');
-        moveElement(previousElemID, -1, 100);
+        moveElement(previousElemID, 300, -100, 0);
         nextElemID = childsArray[0].href.replace(/.*#(.*)/g,'$1');
-        moveElement(nextElemID, 1, 100);
+        moveElement(nextElemID, 300, 100, 0);
         movePrevious(that);
       }
       if (!that.previousElementSibling) {
         nextElemID = that.nextElementSibling.href.replace(/.*#(.*)/g,'$1');
-        moveElement(nextElemID, -1, 100);
+        moveElement(nextElemID, 300, -100, 0);
         previousElemID = childsArray[childsArray.length-1].href.replace(/.*#(.*)/g, '$1');
-        moveElement(previousElemID, -1, 100);
+        moveElement(previousElemID, 300, -100, 0);
         moveNext(that);
       }
       if (that.nextElementSibling && that.previousElementSibling) {
@@ -228,4 +228,47 @@ function clickImg() {
   }
 }
 addLoadEvent(clickImg);
-//carousel('item1', '-100%', 300ms)
+
+/* === attention === */
+function autoword() {
+  var wordSlide = document.getElementById('wordSlide');
+  var wordLists = new Array();
+  var thisItem, thisList, thisId, nextItem, nextList, nextId;
+  for (let i=0; i<wordSlide.childNodes.length; i++) {
+    if (wordSlide.childNodes[i].nodeType != 1) continue;
+    wordLists.push(wordSlide.childNodes[i]);
+  }
+  function listsCycle(item) {
+    thisItem = item%7;
+    thisList = wordLists[thisItem];
+    thisId = thisList.getAttribute('id');
+    nextItem = (item+1)%7;
+    nextList = wordLists[nextItem];
+    nextId = nextList.getAttribute('id');
+    
+    nextList.style.transform = 'translate(0%,100%)';
+    nextList.style.display = 'list-item';
+    nextList.style.transitionProperty = 'none';
+    nextList.style.transitionDuration = 0;
+    
+    thisList.autoplay = setTimeout(function () {
+      moveElement(thisId, 300, 0, -100);
+      moveElement(nextId, 300, 0, 0);
+      listsCycle(nextItem);
+    }, 2000);
+  }
+  listsCycle(0);
+  for (let i=0; i<wordLists.length; i++) {
+    wordLists[i].onmouseover = function() {
+    clearTimeout(this.autoplay);
+    }
+    wordLists[i].onmouseout = function() {
+      thisList.autoplay = setTimeout(function () {
+        moveElement(thisId, 300, 0, -100);
+        moveElement(nextId, 300, 0, 0);
+        listsCycle(nextItem);
+      }, 2000);
+    }
+  }
+}
+addLoadEvent(autoword); 

@@ -1,3 +1,9 @@
+(function (){
+  var myDate = new Date();
+  var age = myDate.getFullYear() - 1993;
+  var ageText = document.getElementById('age');
+  ageText.innerHTML = age;
+})();
 (function () {
   var isMobile = false;  // PC  
   function mobile() {
@@ -26,12 +32,5 @@
   } else {
     return;
   }
-})();
-(function (){
-  var myDate = new Date();
-  var age = myDate.getFullYear() - 1993;
-  var ageText = document.getElementById('age');
-  console.log(age);
-  ageText.innerHTML = age;
 })();
     

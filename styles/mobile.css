@@ -88,8 +88,37 @@ header .info_2 .icon-mail-envelope-closed::before {
   height: 42px;
   margin-right: 5px;
 }
+/* self-description */
+.pro {
+  position: relative;
+  height: 56px;
+  border-top: dotted 2px #aaa;
+  margin-top: 5px;
+}
+.self-description img {
+  position: relative;
+  top: 3px;
+  height: 16px;
+}
+.pro span {
+  display: block;
+  float: left;
+  margin-top: 2px;
+}
+.pro span:last-child {
+  position: absolute;
+  top: -3px;
+  margin-left: 5px;
+}
+.pro span a {
+  float: left;
+  margin: 0px 88px 0 30px;
+}
 
-/* work_ex */
+/* work_exp */
+.work_exp {
+  margin-top: -21px;
+}
 .company {
   font-size: 14px;
 }

@@ -1,32 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <title>wmf'resume</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="icomoon/style.css" />
+    <link rel="stylesheet" href="./icomoon/iconfont.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>wmf'resume</title>
   </head>
   <body>
-    <div class="body">
+    <div class="container">
       <header>
         <div class="name">吴明飞</div>
         <div class="header_info">
           <div class="identity">
-            <i class="icon-briefcase fonticon"></i><span>分析员·美诺华药物研究院</span>
+            <i class="icon-briefcase iconfont"></i><span>前端开发</span>
           </div>
           <div class="info_1">
             <span>
-              <i class="icon-user-tie fonticon"></i><em>男</em>
-              <em><span id="age">25</span>岁</em>
+              <i class="icon-user-tie iconfont"></i><em>男</em>
+              <em><span id="age"></span>岁</em>
               <em>本科</em>
-              <em>2年工作经验（化学分析）</em>
-              <em><i class="icon-location fonticon"></i>绍兴</em>
+              <em>1年前端开发经验</em>
+              <em><i class="icon-location iconfont"></i>杭州</em>
             </span>
           </div>
           <div class="info_2">
-            <em><i class="icon-contact fonticon"></i>18389595185</em>
-            <em><i class="icon-mail-envelope-closed fonticon"></i><span class="email">mingfei.wu@outlook.com</span></em>
+            <em><i class="icon-contact iconfont"></i><em>18389595185</em></em>
+            <em><i class="icon-mail-envelope-closed iconfont"></i><span class="email">mingfei.wu@qq.com</span></em>
           </div>
         </div>
       </header>
@@ -43,18 +44,54 @@
       <div class="self-description">
         <div class="title">自我介绍</div>
         <div class="content">
-          <p>本人自学前端一年有余，学习途径主要是书籍、技术博客以及教学视频；</p>
-          <p>热爱编程，热衷于新技术的学习，自学能力较强，无不良嗜好。</p><br />
+          <!-- <p>本人自学前端一年有余，学习途径主要是书籍、技术博客以及教学视频；</p> -->
+          <!-- <p>热爱编程，热衷于新技术的学习，自学能力较强，无不良嗜好。</p><br /> -->
           <div>
             <p>个人技术栈:</p>
             <ul>
-              <li>熟悉HTML, CSS, JavaScript;</li>
-              <li>熟悉JavaScript的DOM操作、闭包、原型链、AJAX、JSON;</li>
-              <li>熟悉VueJS以及webpack打包工具;</li>
+              <li>熟练使用HTML, CSS及原生JavaScript进行网页开发;</li>
+              <li>熟练使用AJAX;</li>
+              <li>熟练使用微信小程序原生框架进行微信小程序开发;</li>
+              <li>熟悉使用VUE及简单使用webpack打包工具;</li>
           </div>
-          <p class="pro">
-            <span>作品:</span>
-            <span>
+          <div class="pro">
+            <div>作品:</div>
+            <div class="list">
+              <ul>
+                <li>
+                  <div class="first">1. 专题：</div>
+                  <div class="last">
+                    <a class="myproject" href="https://zzhz.zjol.com.cn/material/2017zt/2019fapaifang/index.html" target="_blank">2019年杭州（八区）法拍房大盘点</a><br />
+                    <a class="myproject" href="https://zzhz.zjol.com.cn/material/zt/hnydd/index.html" target="_blank">海宁市读地云</a>
+                  </div>
+                </li>
+                <li>
+                  <div>2. 单页面：</div>
+                  <div>
+                    <a class="myproject" href="https://zzhz.zjol.com.cn/ycpd/" target="_blank">住杭原创频道</a><br />
+                    <a class="myproject" href="https://land.zzhz.zjol.com.cn/newPageindex.html" target="_blank">浙报传媒地产研究院|浙江省土地库</a>
+                  </div>
+                </li>
+                <li>
+                  <div>3. 微信小程序：</div>
+                  <div>
+                    <div class="box">
+                      <img src="./images/xf.jpg" />
+                      <span>选房小助手</span>
+                    </div>
+                    <div class="box">
+                      <img src="./images/tdzb.jpg" />
+                      <span>土地直播小程序</span>
+                    </div>
+                    <div class="box">
+                      <span class="temp">开发中</span>
+                      <span>住杭小程序</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- <span>
               <a href="production/about_qidian/test.html" target="_blank">
                 <img src="images/qidian_icon.png" />
                 <em>仿写"起点主页"</em>
@@ -64,14 +101,15 @@
                 <img src="images/vue.png" />
                 <em>Vue_product(coding...)</em>
               </a>
-          </p>
+            </span> -->
+          </div>
         </div>
       </div>
       <div class="work_exp">
         <div class="title">工作经历</div>
         <div class="content">
           <p class="company">美诺华药物研究院
-            <span class="time">2016.08-至今</span>
+            <span class="time">2016.08-2019.06</span>
           </p>
           <p>分析员</p>
           <ul>
@@ -80,8 +118,19 @@
             <li>对分析方法的验证（起草方案，实验过程验证，起草报告）</li>
           </ul>
         </div>
+        <div class="content">
+          <p class="company">杭州赤焰碧波公关策划有限公司
+            <span class="time">2019.06-至今</span>
+          </p>
+          <p>前端开发</p>
+          <ul>
+            <li>专题页面开发</li>
+            <li>网站的网页更新及升级维护</li>
+            <li>微信小程序开发</li>
+          </ul>
+        </div>
       </div>
-      <div class="approach_me">
+      <!-- <div class="approach_me">
         <div class="title">社交主页</div>
         <div class="content">
           <ul>
@@ -93,7 +142,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
     </div>
     <script src="scripts/global.js"></script>
   </body>

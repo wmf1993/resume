@@ -10,13 +10,17 @@ a:visited { color: #808080;}
 a:hover { color: #ed4259;}
 a:active { color: #808080;}
 
+.iconfont {
+  margin: 0px 5px;
+}
+
 body {
   width: 700px;
   font-size: 14px;
   font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
 }
 
-.body {
+.container {
     background-color: #fafafa;
     margin-bottom: 30px;
 }
@@ -36,34 +40,27 @@ header .header_info {
 header .header_info div{
   margin: 5px 2px;
 } 
-header .identity .fonticon {
-  margin: 0px 5px;
-}
-header .info_1 span>i {
+/* header .info_1 span>i {
   margin: 5px;
-}
+} */
 header .info_1 em {
   margin: 5px;
 }
-header .info_2 em:last-child {
+header .info_2 > em:last-child {
   margin-left: 10px;
+  line-height: 16px;
 }
-/*
-header .info_2 .icon-mail-envelope-closed::before {
-  position: relative;
-  top: 2px;
+.icon-mail-envelope-closed {
+  vertical-align: middle;
 }
-*/ 
-
-
 
 
 /* main */
-.body>div {
+.container>div {
   margin: 10px 0px;
   padding: 0px 15px;
 }
-.body div .title {
+.container div .title {
   padding-bottom: 5px;
   border-style: solid;
   border-width: 0px 0px 2px 0px;
@@ -74,12 +71,13 @@ header .info_2 .icon-mail-envelope-closed::before {
 .time {
   float: right;
   width: 150px;
-  text-align: left;
+  text-align: right;
   font-size: 14px;
-  margin-right: 200px;
+  margin-right: 100px;
 }
 .content {
   margin-top: 5px;
+  overflow: hidden;
 }
 
 /* education */
@@ -97,8 +95,6 @@ header .info_2 .icon-mail-envelope-closed::before {
 
 /* self-description */
 .self-description .content p:last-child {
-  padding-top: 5px;
-  margin-top: 10px;
 }
 .self-description .content p a {
   display: inline-block;
@@ -108,10 +104,10 @@ header .info_2 .icon-mail-envelope-closed::before {
   padding-right: 20px;
   border-right: solid 1px #aaa;
   
-  animation-name: fontcolor;
+  /* animation-name: fontcolor;
   animation-duration: 3s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 }
 .self-description .content p a:last-child {
   border-right: none;
@@ -124,8 +120,6 @@ header .info_2 .icon-mail-envelope-closed::before {
   width: 16px;
   height: 16px;
 }
-.self-description .content p a em {
-}
 .self-description .content p>em {
   margin-right: 5px;
 }
@@ -136,14 +130,77 @@ header .info_2 .icon-mail-envelope-closed::before {
   75% {color: #ff00ff; bottom: -3px;}
   100% {color: #ed4259; bottom: 0px;}
 }
-.self-description .content p:last-child {
+.self-description .content .pro {
   border-top: dotted 2px #aaa;
-  margin-top: 5px;
+  padding-top: 5px;
+  margin-top: 10px;
+}
+
+.self-description .content .pro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.self-description .content .pro > div {
+  margin: 0;
+}
+.self-description .content .pro > div:first-child {
+  flex-shrink: 0;
+}
+.self-description .content .pro .list {
+  width: 100%;
+}
+.self-description .content .pro ul {
+  padding-left: 10px;
+}
+.self-description .content .pro ul li {
+  display: flex;
+  /* width: 100%; */
+  margin-bottom: 10px;
+}
+.self-description .content .pro ul li > div {
+  margin: 0;
+}
+.self-description .content .pro ul li > div:first-child {
+  flex-shrink: 0;
+}
+.self-description .content .pro ul li > div:last-child {
+  color: #808080;
+}
+.self-description .content .pro ul .box {
+  display: inline-block;
+  margin-right: 10px;
+}
+.self-description .content .pro ul .box img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+.self-description .content .pro ul .box span {
+  display: block;
+  text-align: center;
+}
+.self-description .content .pro ul .box .temp {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 100%;
+  color: #000000;
+  background-color: #eeeeee;
 }
   
-/* work_ex */
+/* 工作经历 */
 .company {
   font-size: 16px;
+}
+.work_exp .content {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px dashed #cccccc;
+}
+.work_exp .content:last-child {
+  border-bottom: none;
 }
 
 

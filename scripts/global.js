@@ -1,36 +1,69 @@
-(function (){
-  var myDate = new Date();
-  var age = myDate.getFullYear() - 1993;
-  var ageText = document.getElementById('age');
-  ageText.innerHTML = age;
-})();
-(function () {
-  var isMobile = false;  // PC  
-  function mobile() {
-    try {
-      document.createEvent('TouchEvent');
-      return true;  // mobile
+const domOperate = {
+  init: function () {
+    /* 判断是否移动端 */
+    this.setStylePath()
+    /* 年龄 */
+    document.getElementById('age').innerText = this.methods.getMyAge()
+  },
+  setStylePath: function () {
+    if (this.methods.isMobile()) {
+      var links = document.getElementsByTagName('link')
+      var newElem = document.createElement('link')
+      newElem.rel = 'stylesheet'
+      newElem.href = '../styles/mobile.css' + '?t=' + new Date().getTime()
+      paCss = Array.from(links).find(elem => {
+        var href = elem.href || ''
+        return href.search('main.css') > -1
+      })
+      this.methods.insertAfter(newElem, paCss)
     }
-    catch (e) {
-      return false;
+  },
+  methods: {
+    /* 年龄 */
+    getMyAge: function () {
+      var myDate = new Date();
+      var age = myDate.getFullYear() - 1993;
+      return age
+    },
+    /* 是否移动端 */
+    isMobile: function () {
+      var flag = false
+      var userAgentInfo = navigator.userAgent
+      var mobileType = [
+        'Android',
+        'iPhone',
+        'SymbianOS',
+        'Windows Phone',
+        'iPad',
+        'iPod'
+      ]
+      for (var i = 0; i < mobileType.length; i++) {
+        if (userAgentInfo.match(mobileType[i])) {
+          flag = true
+          break
+        }
+      }
+      return flag
+    },
+    /* 元素后插入新元素 */
+    insertAfter: function (newElem, targetElem) {
+      var parent = targetElem.parentNode;
+      if (parent.lastChild === targetElem) {
+        parent.appendChild(newElem);
+      } else {
+        parent.insertBefore(newElem, targetElem.nextSibling);
+      }
+    },
+    /* 显示URL */
+    showURL: function () {
+      var list = document.getElementsByClassName('myproject')
+      Array.from(list).map(item => {
+        var href = item.href
+        item.innerText += `: ${href}`
+        return item
+      })
     }
   }
-  isMobile = mobile();
-  
-  var links = document.getElementsByTagName('link');
-  if (isMobile == true) {
-    for (var i=0; i<links.length; i++) {
-      var linkHref = links[i].href;
-      if ((/(.*)(main.css)/ig).test(linkHref) == false) continue;
-      links[i].href = linkHref.replace(/(.*)(main.css)/ig, '$1'+'mobile.css');
-      var meta = document.createElement('meta');
-      meta.name = 'viewport';
-      meta.content = 'width=device-width';
-      console.log(meta);
-      links[i].parentNode.appendChild(meta);
-    }
-  } else {
-    return;
-  }
-})();
-    
+}
+domOperate.init();
+// domOperate.methods.showURL();

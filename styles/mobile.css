@@ -1,16 +1,5 @@
-* {
-  margin: 0 auto;
-  text-decoration: none;
-  font-style: normal;
-
-}
-
-a:link { color: #808080;}
-a:visited { color: #808080;}
-a:hover { color: #ed4259;}
-a:active { color: #808080;}
-
 body {
+  width: 100%;
   font-size: 12px;
   font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
   background-color: #fafafa;
@@ -18,22 +7,8 @@ body {
 
 
 /* header */
-header {
-  text-align: center;
-}
 header .name {
   font-size: 25px;
-  font-family: Arial, "Hiragino Sans GB", 微软雅黑, 宋体;
-  margin: 10px 0px;
-}
-header .header_info {
-  color: #333;
-}
-header .header_info div{
-  margin: 5px 2px;
-} 
-header .identity .fonticon {
-  margin: 0px 5px;
 }
 header .info_1 span>i {
   margin: 5px 2px;
@@ -44,73 +19,45 @@ header .info_1 em {
 header .info_2 em:last-child {
   margin-left: 5px;
 }
-/*
-header .info_2 .icon-mail-envelope-closed::before {
-  position: relative;
-  top: 2px;
-}
-*/ 
-
 
 /* main */
-.body>div {
-  margin: 10px 0px;
-  padding: 0px 15px;
-}
-.body div .title {
-  padding-bottom: 5px;
-  border-style: solid;
-  border-width: 0px 0px 2px 0px;
-  border-color: #aaa;
-  
+.container div .title {
   font-size: 15px;
 }
 .time {
-  float: right;
   width: 100px;
-  text-align: left;
   font-size: 12px;
-  margin-right: 100px;
-}
-.content {
-  margin-top: 5px;
+  margin-right: 25px;
 }
 
 /* education */
 .education div .univ {
   font-size: 14px;
 }
-.education div p {
-  margin: 2px 0px;
-}
-.education div img {
-  float: left;
-  height: 42px;
-  margin-right: 5px;
-}
+
 /* self-description */
-.pro {
-  position: relative;
-  height: 56px;
-  border-top: dotted 2px #aaa;
-  margin-top: 5px;
-}
 .self-description img {
   position: relative;
   top: 3px;
   height: 16px;
 }
-.pro span {
+.pro {
+  position: relative;
+  /* height: 56px; */
+  border-top: dotted 2px #aaa;
+  margin-top: 5px;
+}
+.pro > span {
   display: block;
   float: left;
   margin-top: 2px;
 }
-.pro span:last-child {
+.pro > span:last-child {
   position: absolute;
   top: -3px;
   margin-left: 5px;
 }
-.pro span a {
+.pro > span a {
   float: left;
   margin: 0px 88px 0 30px;
 }
@@ -125,26 +72,26 @@ header .info_2 .icon-mail-envelope-closed::before {
 
 
 /* approach_me */
-.approach_me .content ul {
-  list-style-type: none;
-  padding: 0px;
-}
+
 .approach_me .content ul li {
-  height: 19px;
-  margin-top: 10px;
   font-size: 12px;
 }
-.approach_me a {
-  position: relative;
-  bottom: 5px;
-  height: 19px;
+
+.self-description .content .pro {
+  display: block;
 }
-.approach_me img {
-  position: relative;
-  top: 4px;
-  height: 19px;
+.self-description .content .pro ul {
+  padding-left: 5px;
+}
+.self-description .content .pro ul .box {
   margin-right: 5px;
 }
-.approach_me em {
-  width: 250px;
+.self-description .content .pro ul .box img {
+  width: 50px;
+  height: 50px;
+}
+.self-description .content .pro ul .box .temp {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
 }

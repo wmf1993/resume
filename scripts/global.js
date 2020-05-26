@@ -10,7 +10,8 @@ const domOperate = {
       var links = document.getElementsByTagName('link')
       var newElem = document.createElement('link')
       newElem.rel = 'stylesheet'
-      newElem.href = './styles/mobile.css' + '?t=' + new Date().getTime()
+      // newElem.href = './styles/mobile.css' + '?t=' + new Date().getTime()
+      newElem.href = './styles/mobile.css'
       paCss = Array.from(links).find(elem => {
         var href = elem.href || ''
         return href.search('main.css') > -1

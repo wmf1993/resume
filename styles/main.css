@@ -2,13 +2,23 @@
   margin: 0 auto;
   text-decoration: none;
   font-style: normal;
-
 }
 
-a:link { color: #808080;}
-a:visited { color: #808080;}
-a:hover { color: #ed4259;}
-a:active { color: #808080;}
+a:link {
+  color: #808080;
+}
+
+a:visited {
+  color: #808080;
+}
+
+a:hover {
+  color: #ed4259;
+}
+
+a:active {
+  color: #808080;
+}
 
 .iconfont {
   margin: 0px 5px;
@@ -17,57 +27,67 @@ a:active { color: #808080;}
 body {
   width: 700px;
   font-size: 14px;
-  font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica
+  font-family: "Hiragino Sans GB", "Microsoft Yahei", SimSun, Arial, "Helvetica Neue", Helvetica
 }
 
 .container {
-    background-color: #fafafa;
-    margin-bottom: 30px;
+  display: none;
+  background-color: #fafafa;
+  margin-bottom: 30px;
 }
 
 /* header */
+
 header {
   text-align: center;
 }
+
 header .name {
   font-size: 30px;
   font-family: Arial, "Hiragino Sans GB", 微软雅黑, 宋体;
   margin: 10px 0px;
 }
+
 header .header_info {
   color: #333;
 }
-header .header_info div{
+
+header .header_info div {
   margin: 5px 2px;
-} 
+}
+
 /* header .info_1 span>i {
   margin: 5px;
 } */
+
 header .info_1 em {
   margin: 5px;
 }
-header .info_2 > em:last-child {
+
+header .info_2>em:last-child {
   margin-left: 10px;
   line-height: 16px;
 }
+
 .icon-mail-envelope-closed {
   vertical-align: middle;
 }
 
-
 /* main */
+
 .container>div {
   margin: 10px 0px;
   padding: 0px 15px;
 }
+
 .container div .title {
   padding-bottom: 5px;
   border-style: solid;
   border-width: 0px 0px 2px 0px;
   border-color: #aaa;
-  
   font-size: 18px;
 }
+
 .time {
   float: right;
   width: 150px;
@@ -75,18 +95,22 @@ header .info_2 > em:last-child {
   font-size: 14px;
   margin-right: 100px;
 }
+
 .content {
   margin-top: 5px;
   overflow: hidden;
 }
 
 /* education */
+
 .education div .univ {
   font-size: 16px;
 }
+
 .education div p {
   margin: 2px 0px;
 }
+
 .education div img {
   float: left;
   height: 42px;
@@ -94,42 +118,61 @@ header .info_2 > em:last-child {
 }
 
 /* self-description */
-.self-description .content p:last-child {
-}
+
+.self-description .content p:last-child {}
+
 .self-description .content p a {
   display: inline-block;
   position: relative;
   width: auto;
-  margin-right:20px;
+  margin-right: 20px;
   padding-right: 20px;
   border-right: solid 1px #aaa;
-  
   /* animation-name: fontcolor;
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite; */
 }
+
 .self-description .content p a:last-child {
   border-right: none;
   margin-left: -5px;
 }
-  
+
 .self-description .content p a img {
   position: relative;
   top: 3px;
   width: 16px;
   height: 16px;
 }
+
 .self-description .content p>em {
   margin-right: 5px;
 }
+
 @keyframes fontcolor {
-  0% {color: #ed4259; bottom: 0px;}
-  25% {color: #00ff00; bottom: 3px;}
-  50% {color: #0000ff; bottom: 0px;}
-  75% {color: #ff00ff; bottom: -3px;}
-  100% {color: #ed4259; bottom: 0px;}
+  0% {
+    color: #ed4259;
+    bottom: 0px;
+  }
+  25% {
+    color: #00ff00;
+    bottom: 3px;
+  }
+  50% {
+    color: #0000ff;
+    bottom: 0px;
+  }
+  75% {
+    color: #ff00ff;
+    bottom: -3px;
+  }
+  100% {
+    color: #ed4259;
+    bottom: 0px;
+  }
 }
+
 .self-description .content .pro {
   border-top: dotted 2px #aaa;
   padding-top: 5px;
@@ -141,46 +184,58 @@ header .info_2 > em:last-child {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.self-description .content .pro > div {
+
+.self-description .content .pro>div {
   margin: 0;
 }
-.self-description .content .pro > div:first-child {
+
+.self-description .content .pro>div:first-child {
   flex-shrink: 0;
 }
+
 .self-description .content .pro .list {
   width: 100%;
 }
+
 .self-description .content .pro ul {
   padding-left: 10px;
 }
+
 .self-description .content .pro ul li {
   display: flex;
   /* width: 100%; */
   margin-bottom: 10px;
 }
-.self-description .content .pro ul li > div {
+
+.self-description .content .pro ul li>div {
   margin: 0;
 }
-.self-description .content .pro ul li > div:first-child {
+
+.self-description .content .pro ul li>div:first-child {
   flex-shrink: 0;
 }
-.self-description .content .pro ul li > div:last-child {
+
+.self-description .content .pro ul li>div:last-child {
   color: #808080;
 }
+
 .self-description .content .pro ul .box {
   display: inline-block;
   margin-right: 10px;
 }
+
 .self-description .content .pro ul .box img {
   display: block;
   width: 100px;
   height: 100px;
   border-radius: 100%;
 }
+
 .self-description .content .pro ul .box span {
   display: block;
   text-align: center;
 }
+
 .self-description .content .pro ul .box .temp {
   width: 100px;
   height: 100px;
@@ -189,42 +244,49 @@ header .info_2 > em:last-child {
   color: #000000;
   background-color: #eeeeee;
 }
-  
+
 /* 工作经历 */
+
 .company {
   font-size: 16px;
 }
+
 .work_exp .content {
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 1px dashed #cccccc;
 }
+
 .work_exp .content:last-child {
   border-bottom: none;
 }
 
-
 /* approach_me */
+
 .approach_me .content ul {
   list-style-type: none;
   padding: 0px;
 }
+
 .approach_me .content ul li {
   height: 19px;
   margin-top: 10px;
   font-size: 14px;
 }
+
 .approach_me a {
   position: relative;
   bottom: 5px;
   height: 19px;
 }
+
 .approach_me img {
   position: relative;
   top: 4px;
   height: 19px;
   margin-right: 5px;
 }
+
 .approach_me em {
   width: 250px;
 }

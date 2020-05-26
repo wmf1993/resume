@@ -6,6 +6,7 @@ const domOperate = {
     document.getElementById('age').innerText = this.methods.getMyAge()
   },
   setStylePath: function () {
+    var container = document.getElementsByClassName('container')[0]
     if (this.methods.isMobile()) {
       var links = document.getElementsByTagName('link')
       var newElem = document.createElement('link')
@@ -17,6 +18,11 @@ const domOperate = {
         return href.search('main.css') > -1
       })
       this.methods.insertAfter(newElem, paCss)
+      newElem.onload = function () {
+        container.style.display = 'block'
+      }
+    } else {
+      container.style.display = 'block'
     }
   },
   methods: {
